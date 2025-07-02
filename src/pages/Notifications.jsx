@@ -183,7 +183,21 @@ const Notifications = () => {
       key: 'createdAt',
       header: 'Created',
       accessor: 'createdAt',
-      render: (notification) => format(parseISO(notification.createdAt), 'MMM d, yyyy HH:mm')
+      render: (notification) => {
+        if (!notification.createdAt) return '-';
+        let date;
+        try {
+          date = parseISO(notification.createdAt);
+        } catch (e) {
+          return '-';
+        }
+        if (isNaN(date)) return '-';
+        try {
+          return format(date, 'MMM d, yyyy HH:mm');
+        } catch (e) {
+          return '-';
+        }
+      }
     }
   ]
 
@@ -349,8 +363,8 @@ const Notifications = () => {
               >
                 <option value="">Select recipient</option>
                 <option value="all">All Members</option>
-                {members.filter(m => m.membershipStatus === 'ACTIVE').map(member => (
-                  <option key={member.id} value={member.id}>
+                {members.filter(m => m.membershipStatus === 'ACTIVE').map((member) => (
+                  <option key={member.id || member.email || member.name} value={member.id}>
                     {member.name} ({member.email})
                   </option>
                 ))}
