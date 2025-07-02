@@ -87,7 +87,7 @@ The frontend communicates with the backend through these API endpoints:
 
 ## Project Structure
 
-\`\`\`
+```
 src/
 ├── components/
 │   ├── Dashboard.js
@@ -104,7 +104,7 @@ src/
 ├── App.css
 ├── index.js
 └── index.css
-\`\`\`
+```
 
 ## Features Overview
 
@@ -176,9 +176,9 @@ The application is fully responsive and works on:
 
 To create a production build:
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 This builds the app for production to the `build` folder and optimizes the build for best performance.
 
