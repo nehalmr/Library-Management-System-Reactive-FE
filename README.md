@@ -29,7 +29,7 @@ A modern, responsive React.js frontend for the Library Management System that in
 
 1. Clone the repository:
 ```bash
-git clone [<repository-url>](https://github.com/nehalmr/Library-Management-System-Reactive-Frontend.git)
+git clone https://github.com/nehalmr/Library-Management-System-Reactive-Frontend.git
 cd library-management-frontend
 ```
 2. Install dependencies:
