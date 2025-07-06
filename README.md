@@ -28,20 +28,19 @@ A modern, responsive React.js frontend for the Library Management System that in
 ## Installation
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone <repository-url>
 cd library-management-frontend
-\`\`\`
-
+```
 2. Install dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. Start the development server:
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
